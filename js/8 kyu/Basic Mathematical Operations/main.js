@@ -17,3 +17,19 @@ Examples(Operator, value1, value2) --> output
 function basicOp(operation, value1, value2) {
   return eval(`${value1} ${operation} ${value2}`);
 }
+//probably the better solution for more console
+
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case '+':
+      return value1 + value2;
+    case '-':
+      return value1 - value2;
+    case '*':
+      return value1 * value2;
+    case '/':
+      return value1 / value2;
+    default:
+      return 0;
+  }
+}
