@@ -11,7 +11,18 @@ If a value is present in b, all of its occurrences must be removed from the othe
 arrayDiff([1,2,2,2,3],[2]) == [1,3]
 */
 
-//Solution
+// First Solution
+function arrayDiff(a, b) {
+  let newArr = [];
+  for (let i = 0; i < a.length; i++) {
+    if (!b.includes(a[i])) {
+      newArr.push(a[i]);
+    }
+  }
+  return newArr;
+}
+
+// Refactored Solution
 function arrayDiff(a, b) {
   return (result = a.filter((adex) => !b.includes(adex)));
 }
