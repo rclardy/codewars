@@ -24,3 +24,18 @@ function isIsogram(str) {
   }
   return true;
 }
+
+//Solution 2
+
+function isIsogram(str) {
+  let strArry = str.toLowerCase().split('');
+  let seen = {};
+  for (let i = 0; i < strArry.length; i++) {
+    let char = strArry[i];
+    if (seen[char]) {
+      return false;
+    }
+    seen[char] = strArry[i];
+  }
+  return true;
+}
