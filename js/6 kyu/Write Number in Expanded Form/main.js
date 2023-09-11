@@ -19,8 +19,8 @@ function expandedForm(num) {
   for (let i = 0; i < numDigits; i++) {
     const digit = parseInt(numStr[i]);
     if (digit !== 0) {
-      const longForm = digit * Math.pow(10, numDigits - i - 1);
-      bigNums.push(longForm.toString());
+      const placeValue = digit * Math.pow(10, numDigits - i - 1);
+      bigNums.push(placeValue.toString());
     }
   }
   return bigNums.join(' + ');
