@@ -18,3 +18,10 @@ String.prototype.toJadenCase = function () {
   });
   return strArry.join(' ');
 };
+
+//Refactored Solution:
+String.prototype.toJadenCase = function () {
+  return this.split(' ')
+    .map((item) => item[0].toUpperCase() + item.slice(1))
+    .join(' ');
+};
