@@ -14,3 +14,19 @@ function cockroachSpeed(s) {
   const convertionEquation = (1000 * 100) / 3600;
   return Math.floor(s * convertionEquation);
 }
+
+//Commented out
+
+function cockroachSpeed(s) {
+  // Conversion factor: 1 km/h = (1000 * 100) cm/s / 3600 s
+  const conversionFactor = (1000 * 100) / 3600;
+
+  // Convert speed from km/h to cm/s
+  const speedInCmPerSecond = s * conversionFactor;
+
+  // Round down the result to the nearest integer using Math.floor
+  const roundedSpeed = Math.floor(speedInCmPerSecond);
+
+  // Return the rounded speed value
+  return roundedSpeed;
+}
