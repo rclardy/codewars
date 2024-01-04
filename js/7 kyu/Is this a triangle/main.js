@@ -33,3 +33,16 @@ function isTriangle(a, b, c) {
     return false;
   }
 }
+
+//Way better verision
+function isTriangle(a, b, c) {
+  let sides = [a, b, c];
+
+  // Check if every element is greater than 0
+  if (sides.every((el) => el > 0)) {
+    // Check the triangle inequality theorem
+    return a + b > c && a + c > b && b + c > a;
+  } else {
+    return false;
+  }
+}
