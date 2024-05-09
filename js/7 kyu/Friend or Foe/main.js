@@ -23,3 +23,9 @@ function friend(friends) {
   });
   return myFriends;
 }
+
+//refactored
+
+function friend(friends) {
+  return friends.filter((n) => n.length === 4);
+}
