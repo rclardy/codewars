@@ -30,3 +30,10 @@ function roundToNext5(n) {
     return n - (n % 5);
   }
 }
+
+// as always I over complicate things. This is better
+
+function roundToNext5(n) {
+  while (n % 5 !== 0) n++;
+  return n;
+}
